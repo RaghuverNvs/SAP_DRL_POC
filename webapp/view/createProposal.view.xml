@@ -1,0 +1,116 @@
+<mvc:View controllerName="drlpoc.controller.createProposal"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:card="sap.f.cards"
+    xmlns:w="sap.ui.integration.widgets"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:smartForm="sap.ui.comp.smartform"
+    xmlns:smartField="sap.ui.comp.smartfield"
+    >
+    <Page id="page" title="{i18n>title}">
+        <content>
+       	<Panel>
+				 <!-- <HBox id='box1'>	 -->
+                      <!-- <VBox>
+					  <Label text="Name of the Medical Representative" design="Standard"></Label>
+                       <Label text="Chandra" design="Standard"></Label>
+                       </VBox>
+					<VBox>
+					  <Label text="Medical Representative ID" design="Standard"></Label>
+                       <Label text="3589" design="Standard"></Label>
+                       </VBox>
+                     <VBox>
+					  <Label text="Reporting Manager" design="Standard"></Label>
+                       <Label text="Chandra" design="Standard"></Label>
+                     </VBox>
+					  </HBox> -->
+            <HBox>
+             <f:Card
+                id="_IDGenCard3"
+                class="cardStyles"
+                width="279px"
+                height="92px"
+            >
+                <f:header>
+                    <card:Header
+                        id="_IDGenHeader3"
+                        title="Name of the Medical Representative"
+                    />
+                </f:header>
+                <f:content>
+                        <HBox
+                            id="_IDGenHBox8"
+                            class="hBoxStyles"
+                        >
+                            <Text
+                                id="_IDGenLabel4"
+                                text="Chandra"
+                                class="meduimLabelMargin heading H2" 
+                            />      
+                        </HBox>
+                            
+                </f:content>
+            </f:Card>
+              <f:Card
+                id="_IDGenCard33"
+                class="cardStyles"
+                width="272px"
+                height="92px">
+                <f:header>
+                    <card:Header
+                        id="_IDGenHeader33"
+                        title="Medical Representative ID"
+                    />
+                </f:header>
+                <f:content>
+                        <HBox
+                            id="_IDGenHBox83"
+                            class="hBoxStyles"
+                        >
+                            <Text
+                                id="_IDGenLabel44"
+                                text="3574"
+                                class="meduimLabelMargin" 
+                            />      
+                        </HBox>
+                            
+                </f:content>
+            </f:Card>
+
+              <f:Card
+                id="_IDGenCard35"
+                class="cardStyles"
+                width="272px"
+                height="92px">
+                <f:header>
+                    <card:Header
+                        id="_IDGenHeader35"
+                        title="Reporting Manager"
+                    />
+                </f:header>
+                <f:content>
+                        <HBox
+                            id="_IDGenHBox85"
+                            class="hBoxStyles"
+                        >
+                            <Text
+                                id="_IDGenLabel45"
+                                text="Siddu"
+                                class="meduimLabelMargin" 
+                            />      
+                        </HBox>
+                            
+                </f:content>
+            </f:Card>
+</HBox>
+		</Panel>
+ <Bar class="bar">
+ <contentRight>
+ 	 <Button id='create' class="create"  type="Emphasized" text='Create Proposal Ticket' icon="sap-icon://create-form" press="onPressCreate"/>
+ </contentRight>
+ </Bar>
+        </content>
+    </Page>
+</mvc:View>

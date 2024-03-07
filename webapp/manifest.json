@@ -92,21 +92,18 @@
       },
       "routes": [
         {
-          "name": "RouteView1",
-          "pattern": ":?query:",
+          "name": "Screen1",
+          "pattern": "",
           "target": [
-            "TargetView1"
+              "Screen1"
           ]
-        }
+      }
       ],
       "targets": {
-        "TargetView1": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "View1",
-          "viewName": "View1"
-        }
+        "Screen1": {
+          "viewId": "Screen1",
+          "viewName": "createProposal"
+      }
       }
     },
     "rootView": {
