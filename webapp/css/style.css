@@ -74,3 +74,111 @@
 .headdingNames{
   font-weight: bold;
 }
+.homePageBackground{
+  color: #ffffff;
+  text-shadow: none;
+}
+.sapUiSizeCompact .sapMPageHeader .sapMIBar .sapMBarLeft, .sapUiSizeCompact .sapMPageFooter .sapMIBar .sapMBarLeft, .sapUiSizeCompact .sapMPageHeader .sapMIBar .sapMBarRight, .sapUiSizeCompact .sapMPageFooter .sapMIBar .sapMBarRight, .sapUiSizeCompact .sapMPageHeader .sapMIBar .sapMBarPH, .sapUiSizeCompact .sapMPageFooter .sapMIBar .sapMBarPH {
+  height: 2.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  background-color: #0068b5;
+}
+.sapMIBar-CTX .sapMTitle {
+  color: #ffffff;
+  text-shadow: none;
+  
+}
+.heading3 {
+  padding-left: 27px;
+  margin-top: 10px;
+  font-size: 32px;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+.cardStyles{
+  margin-left: 25px;
+     margin-top: 15px;
+     justify-content: start;
+     padding: 3px;
+ }
+ .sapMLabel {
+  color: #556b82;
+  font-size: .875rem;
+  font-family: "72", "72full", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  display: inline-block;
+  white-space: nowrap;
+  cursor: text;
+  overflow: hidden;
+  box-sizing: border-box;
+  --_sap_m_Label_ReservedSpace: 0%;
+  padding: 0px;
+}
+.invoiceStyles{
+  padding-left: 64px
+}
+.invoiceStyles1{
+  padding-left: 50px;
+}
+.paidStyles {
+  padding-left: 97px;
+}
+.paidStyles1{
+  padding-left: 67px
+}
+.invDateStyles {
+  padding-left: 115px;
+}
+.invDateStyles1{
+  padding-left: 93px;
+}
+.dueDateStyles {
+  padding-left: 153px;
+}
+.dueDateStyles1{
+  padding-left: 160px
+  }
+.noteStyles {
+    padding-left: 44px;
+}
+.noteStyles1{
+  padding-left: 137px
+}
+.vBoxStyles{
+  margin: 10px;
+  padding: 3px;
+}
+.createdDate{
+  width: 169px ;
+  margin-left: 8px;
+}
+.targetDate{
+  width: 169px ;
+  margin-left: 18px;
+}
+.totalAttendance{
+  padding-left: 16px;
+  padding-top: 2px;
+}
+.totalAttendance1{
+  padding-left: 20px;
+  padding-top: 2px;
+}
+.meduimLabelMargin {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.radioBtn{
+  margin-right: 62px 
+}
+.totalInvoice{
+  margin-left:35px;
+}
+.customTable th,
+.customTable td {
+  border: 0.5px solid grey;
+  
+
+}

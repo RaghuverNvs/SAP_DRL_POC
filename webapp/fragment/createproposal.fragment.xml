@@ -1,120 +1,268 @@
-<core:FragmentDefinition xmlns:table="sap.ui.table" xmlns:unified="sap.ui.unified"
-   xmlns="sap.m"
-   xmlns:core="sap.ui.core">
-   <Dialog
-      id="createProposal"
-      title="Create Proposal" contentWidth="60%" contentHeight="75%">
-      <content>
-            <VBox id="submitVboxPopUp" >
-                <FlexBox id="fbox1" class="tabs mySamplePadding">
+<core:FragmentDefinition
+    xmlns:table="sap.ui.table"
+    xmlns:unified="sap.ui.unified"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <Dialog
+        id="createProposal"
+        title="Create Proposal"
+        contentWidth="62%"
+        contentHeight="75%"
+    >
+        <content>
+            <VBox id="submitVboxPopUp">
+                <FlexBox
+                    id="fbox1"
+                    class="tabs mySamplePadding"
+                >
                     <VBox id="vbox1">
-                        <HBox id="hbox" class="container" >
-                            <VBox id="subVbox11" class="sapUiTinyMarginBeginEnd">
-                                <Text id="a" text="Name of Budget"></Text>
+                        <HBox
+                            id="hbox"
+                            class="container"
+                        >
+                            <VBox
+                                id="subVbox11"
+                                class="sapUiTinyMarginBeginEnd"
+                            >
+                                <Text
+                                    id="a"
+                                    text="Name of Event"
+                                />
                                 <Input id="inpNOB" />
                             </VBox>
-                            <VBox id="subVbox12" class="sapUiTinyMarginBeginEnd">
-                                <Text id="b" text="Total Budget"></Text>
-                                <Input id="inpTB" type="Number" />
+                            <VBox
+                                id="subVbox12"
+                                class="sapUiTinyMarginBeginEnd"
+                            >
+                                <Text
+                                    id="b"
+                                    text="Total Budget Allocated"
+                                />
+                                <Input
+                                    id="inpTB"
+                                    type="Number"
+                                />
                             </VBox>
-                            <VBox id="subVbox13" class="sapUiTinyMarginBeginEnd">
-                                <Text id="c" text="Agenda"></Text>
-                                <TextArea id="inpAG" rows="2"/>
+                            <VBox
+                                id="subVbox13"
+                                class="sapUiTinyMarginBeginEnd"
+                            >
+                                <Text
+                                    id="c"
+                                    text="Event Details"
+                                />
+                                <TextArea
+                                    id="inpAG"
+                                    rows="2"
+                                />
                             </VBox>
-                            <VBox id="subVbox14" class="sapUiTinyMarginBeginEnd">
-                                <Text id="d" text="Proposed Budget"></Text>
-                                <TextArea id="inpPBL" rows="2"/>
+                            <VBox
+                                id="subVbox14"
+                                class="sapUiTinyMarginBeginEnd"
+                            >
+                                <Text
+                                    id="d"
+                                    text="Proposed Budget"
+                                />
+                                <TextArea
+                                    id="inpPBL"
+                                    rows="2"
+                                />
                             </VBox>
-                            <VBox id="subVbox15" class="sapUiTinyMarginBeginEnd">
-                                <Text id="e" text="Created Date"></Text>
-                                <DatePicker id="inpCD" enabled="false"/>
+                            <VBox
+                                id="subVbox15"
+                                class="createdDate"
+                            >
+                                <Text
+                                    id="e"
+                                    text="Created Date"
+                                />
+                                <DatePicker
+                                    id="inpCD"
+                                    enabled="false"
+                                />
                             </VBox>
-                            <VBox id="subVbox16" class="sapUiTinyMarginBeginEnd">
-                                <Text id="f" text="Targeted Date"></Text>
-                                <DatePicker id="inpTD"></DatePicker>
+                            <VBox
+                                id="subVbox16"
+                                class="targetDate"
+                            >
+                                <Text
+                                    id="f"
+                                    text="Targeted Date"
+                                />
+                                <DatePicker id="inpTD" />
+                            </VBox>
+                            <VBox
+                                id="subVbox11e"
+                                class="totalAttendance"
+                            >
+                                <Text
+                                    id="a1"
+                                    text="Total No of Attendance"
+                                />
+                                <Input id="inpNOBw" />
+                            </VBox>
+                            <VBox
+                                id="subVbox11e2"
+                                class="totalAttendance1"
+                            >
+                                <Text
+                                    id="a12"
+                                    text="Duration"
+                                />
+                                <Select
+                                    id="_IDGenSelect1"
+                                    forceSelection="false"
+                                    selectedKey="{/SelectedProduct}"
+                                    items="{
+						path: '/ProductCollection',
+						sorter: { path: 'Name' }
+					}"
+                                >
+                                    <core:Item
+                                        id="_IDGenItem1"
+                                        key="{cuurencyId}"
+                                        text="{Name}"
+                                    />
+                                </Select>
                             </VBox>
                         </HBox>
-                    </VBox>                    
+                    </VBox>
                 </FlexBox>
             </VBox>
-      </content>
-    
-	<HBox id="_IDGenHBox14" class="tabs mySamplePadding">
-                            <HBox
-                                id="_IDGenHBox15"
-                                class="hBoxStyles"
-                                width="97%"
-                            >
-                                <Table
-                                    alternateRowColors="true"
-                                    mode="MultiSelect"
-                                    id="taxTable"
-                                    class="customTable"
-                                    includeItemInSelection="true"
-                                    itemPress="handleItemPress"
-                                >
-                                    <columns>
-                                        <Column id="_IDGenColumn1">
-                                            <Text
-                                                id="_IDGenText12"
-                                                text="Items"
-                                            />
-                                        </Column>
-                                        <Column id="_IDGenColumn2">
-                                            <Text
-                                                id="_IDGenText13"
-                                                text="Items Description"
-                                            />
-                                        </Column>
-                                        <Column id="_IDGenColumn3">
-                                            <Text
-                                                class="textStyles"
-                                                id="_IDGenText14"
-                                                text="Price"
-                                            />
-                                        </Column>
-                                        <Column id="taxableAmt">
-                                            <Text
-                                                id="_IDGenText15"
-                                                text="Taxable Rate"
-                                            />
-                                        </Column>
-                                        <Column id="_IDGenColumn4">
-                                            <Text
-                                                id="_IDGenText16"
-                                                text="Total"
-                                            />
-                                        </Column>
-                                        <!-- <Column id="_IDGenColumn5">
+        </content>
+        <VBox>
+            <HBox
+                id="_IDGenHBox14"
+                class="tabs mySamplePadding"
+            >
+                <HBox
+                    id="_IDGenHBox15"
+                    class="hBoxStyles"
+                    width="97%"
+                >
+                    <Table
+                        alternateRowColors="true"
+                        mode="MultiSelect"
+                        id="taxTable"
+                        class="customTable"
+                        includeItemInSelection="true"
+                        itemPress="handleItemPress"
+                    >
+                        <columns>
+                            <Column id="_IDGenColumn1">
+                                <Text
+                                    id="_IDGenText12"
+                                    text="Items"
+                                />
+                            </Column>
+                            <Column id="_IDGenColumn2">
+                                <Text
+                                    id="_IDGenText13"
+                                    text="Items Description"
+                                />
+                            </Column>
+                            <Column id="_IDGenColumn3">
+                                <Text
+                                    class="textStyles"
+                                    id="_IDGenText14"
+                                    text="Price"
+                                />
+                            </Column>
+                            <Column id="taxableAmt">
+                                <Text
+                                    id="_IDGenText15"
+                                    text="Taxable Rate"
+                                />
+                            </Column>
+                            <Column id="_IDGenColumn4">
+                                <Text
+                                    id="_IDGenText16"
+                                    text="Total"
+                                />
+                            </Column>
+                            <!-- <Column id="_IDGenColumn5">
                                             <Text
                                                 id="_IDGenText17"
                                                 text="Remarks"
                                             />
                                         </Column> -->
-                                    </columns>
-                                </Table>
+                        </columns>
+                    </Table>
+                </HBox>
+                <HBox id="_IDGenHBox16">
+                    <Button
+                        id="_IDGenButton2"
+                        icon="sap-icon://add"
+                        class="leftMargin"
+                        press="addRow"
+                    />
+                    <Button
+                        id="_IDGenButton3"
+                        icon="sap-icon://less"
+                        class="leftMargin"
+                        press="removeRow"
+                    />
+                </HBox>
+            </HBox>
+            <VBox>
+                <HBox justifyContent="Center">
+                    <Label
+                        text="Payment Mode"
+                    />
+                </HBox>
+                <HBox justifyContent="End">
+                    <RadioButton
+                        text="Cooperate Credit Card "
+                        selected="true" 
+                    />
+                    <RadioButton
+                        text="Net Banking"    
+                    />
+                    <RadioButton
+                        text="UPI"    
+                    />
+                    <RadioButton
+                        text="Cash"  
+                    />
+                </HBox>
+                <HBox justifyContent="Center">
+                    <Label
+                                id="_IDGenLabel10"
+                                text="Total Invoice Amount"
+                                class="totalInvoice"/>
                             </HBox>
-                            <HBox id="_IDGenHBox16">
-                                <Button
-                                    id="_IDGenButton2"
-                                    icon="sap-icon://add"
-                                    class="leftMargin"
-                                    press="addRow"
-                                />
-                                <Button
-                                    id="_IDGenButton3"
-                                    icon="sap-icon://less"
-                                    class="leftMargin"
-                                    press="removeRow"
-                                />
+                            <HBox justifyContent="End">
+                                 <Input
+                                id="totalInvioceAmt"
+                                placeholder="0.00"
+                                description="INR"
+                                width="400px"
+                                editable="false"
+                                value="0.00"  />
                             </HBox>
-                        </HBox>
+                
+                
+            </VBox>
+        </VBox>
         <footer>
-          <Toolbar>
-            <ToolbarSpacer/>
-            <Button id="btnClose" type="Reject"  text="Cancel" press="onCloseDialog"></Button>
-            <Button id="btnCloset" type="Emphasized" text="Create" press="onCloseDialog" class="create"></Button>
-          </Toolbar>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button
+                    id="btnClose"
+                    type="Reject"
+                    text="Cancel"
+                    press="onCloseDialog"
+                />
+                <Button
+                    id="btnCloset"
+                    type="Emphasized"
+                    text="Create"
+                    press="onCloseDialog"
+                    class="create"
+                />
+            </Toolbar>
         </footer>
-      </Dialog>
+    </Dialog>
 </core:FragmentDefinition>

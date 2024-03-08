@@ -9,7 +9,7 @@
     xmlns:smartForm="sap.ui.comp.smartform"
     xmlns:smartField="sap.ui.comp.smartfield"
     >
-    <Page id="page" title="{i18n>title}">
+    <Page id="page" title="{i18n>title}"  class="homePageBackground" titleAlignment="Center">
         <content>
        	<Panel>
 				 <!-- <HBox id='box1'>	 -->
@@ -27,7 +27,7 @@
                      </VBox>
 					  </HBox> -->
             <HBox>
-             <f:Card
+             <!-- <f:Card
                 id="_IDGenCard3"
                 class="cardStyles"
                 width="279px"
@@ -44,10 +44,11 @@
                             id="_IDGenHBox8"
                             class="hBoxStyles"
                         >
-                            <Text
+                            <Input
                                 id="_IDGenLabel4"
-                                text="Chandra"
-                                class="meduimLabelMargin heading H2" 
+                                value="Chandra"
+                                class="meduimLabelMargin" 
+                                enabled="false"
                             />      
                         </HBox>
                             
@@ -69,10 +70,11 @@
                             id="_IDGenHBox83"
                             class="hBoxStyles"
                         >
-                            <Text
+                            <Input
                                 id="_IDGenLabel44"
-                                text="3574"
+                                value="3574"
                                 class="meduimLabelMargin" 
+                                enabled="false"
                             />      
                         </HBox>
                             
@@ -95,22 +97,289 @@
                             id="_IDGenHBox85"
                             class="hBoxStyles"
                         >
-                            <Text
+                            <Input
                                 id="_IDGenLabel45"
-                                text="Siddu"
+                                value="Siddu"
                                 class="meduimLabelMargin" 
+                                enabled="false"
                             />      
                         </HBox>
                             
                 </f:content>
-            </f:Card>
+            </f:Card> -->
+
+             <f:Card
+                        id="_IDGenCard1dfsf"
+                        width="400px"
+                        height="235px"
+                        class="cardStyles"  >
+                        <f:header>
+                            <card:Header
+                                id="_IDGenHeader1"
+                                title="Employee Details"
+                            />
+                        </f:header>
+                        <f:content>
+                            <VBox
+                                id="_IDGenVBox1"
+                                class="vBoxStyles"
+                                width="800px"
+                            >
+                                <HBox id="_IDGenHBox11">
+                                    <Label
+                                        id="_IDGenText1"
+                                        text="Medical Representative ID"
+                                    />
+                                    <Input
+                                        id="_IDGenText6"
+                                        class="invoiceStyles1"
+                                        value="3574"
+                                        enabled="false"
+                                    />
+                                </HBox>
+                                <HBox id="_IDGenHBox2"
+                                >
+                                    <Label
+                                        id="_IDGenText2"
+                                        text="Medical Representative"
+                                    />
+                                    <Input
+                                        id="_IDGenText7"
+                                        class="paidStyles1"
+                                        maxLines="auto"
+                                         value="Raghu"
+                                         enabled="false"
+                                    />
+                                </HBox>
+                                <HBox id="_IDGenHBox3" class="">
+                                    <Label
+                                        id="_IDGenText5"
+                                        text="Reporting Manager"
+                                    />
+                                    <Input
+                                        id="_IDGenText8"
+                                        class="invDateStyles1"
+                                        value="Muzza"
+                                         enabled="false"
+                                    />
+                                </HBox>
+                                <HBox id="_IDGenHBox4" class="">
+                                    <Label
+                                        id="_IDGenText3"
+                                        text="Territory"
+                                    />
+                                    <Input
+                                        id="_IDGenText9"
+                                        class="dueDateStyles1"
+                                        value="Hyderabad"
+                                         enabled="false"
+                                    />
+                                </HBox>
+                                <HBox id="_IDGenHBox5" class="">
+                                    <Label
+                                        id="_IDGenText4"
+                                        text="Cost Center"
+                                    />
+                                    <Input
+                                        id="_IDGenText10"
+                                        class="noteStyles1"
+                                        value="HYD0011"
+                                         enabled="false"
+                                    />
+                                </HBox>
+                            </VBox>
+                        </f:content>
+                    </f:Card>
+
+                    <f:Card
+                        id="_IDGenCard1dfsf1"
+                        width="400px"
+                        height="235px"
+                        class="cardStyles"  >
+                        <f:header>
+                            <card:Header
+                                id="_IDGenHeader11"
+                                title="Year to Date Summary"
+                            />
+                        </f:header>
+                        <f:content>
+                            <VBox
+                                id="_IDGenVBox11"
+                                class="vBoxStyles"
+                                width="800px"
+                            >
+                                <HBox id="_IDGenHBox111" class="">
+                                    <Label
+                                        id="_IDGenText122"
+                                        text="Total Budget Allocated"
+                                    />
+                                    <Input
+                                        id="_IDGenText6355"
+                                        class="invoiceStyles"
+                                        value="1,00,000.00"
+                                        enabled="false"
+                                    />
+                                </HBox>
+                                <HBox id="_IDGenHBox232" class=""
+                                >
+                                    <Label
+                                        id="_IDGenText232"
+                                        text="Event Conducted"
+                                    />
+                                   <Input
+                                        id="_IDGenText63333"
+                                        class="paidStyles"
+                                        value="04"
+                                        enabled="false"
+                                    />
+                                </HBox>
+                                <HBox id="_IDGenHBox33" class="">
+                                    <Label
+                                        id="_IDGenText544"
+                                        text="Amount Spent"
+                                    />
+                                    <Input
+                                        id="_IDGenText62"
+                                        class="invDateStyles"
+                                        value="50,000.00"
+                                        enabled="false"
+                                    />
+                                </HBox>
+                                <HBox id="_IDGenHBox43" class="">
+                                    <Label
+                                        id="_IDGenText332"
+                                        text="Balance"
+                                    />
+                                   <Input
+                                        id="_IDGenText63"
+                                        class="dueDateStyles"
+                                        value="50,000.00"
+                                        enabled="false"
+                                    />
+                                </HBox>
+                                <HBox id="_IDGenHBox523" class="">
+                                   <Label
+                                        id="_IDGenText3321"
+                                        text="Special Approved Amount"
+                                    />
+                                   <Input
+                                        id="_IDGenText62112"
+                                        class="noteStyles"
+                                        value="0"
+                                        enabled="false"
+                                    />
+                                </HBox>
+                            </VBox>
+                        </f:content>
+                    </f:Card>
 </HBox>
+ <VBox id="tableOne" width="100%">
+                        <!-- table should be inserted  -->
+                        <Table
+                            alternateRowColors="true"
+                            headerText="Recent Budget"
+                            id="productsTable"
+                            items="{recentPo>/}"
+                            backgroundDesign="Translucent"
+                            class="customTable">
+                            <columns>
+                                <Column id="invoice">
+                                    <Text
+                                        id="Invoice"
+                                        text="Name of Event"
+                                    />
+                                </Column>
+                                
+                                <Column id="dueDate">
+                                    <Text
+                                        id="uusdfuu"
+                                        text="Total Budget Allocated"
+                                    />
+                                </Column>
+                                <Column id="status">
+                                    <Text
+                                        id="statuss"
+                                        text="Event Details"
+                                    />
+                                </Column>
+                                <Column id="invoiceValue">
+                                    <Text
+                                        id="invoiceValues"
+                                        text="Proposed Budget"
+                                    />
+                                </Column>
+                                <Column id="submittedBy">
+                                    <Text
+                                        id="submitted"
+                                        text="Status"
+                                    />
+                                </Column>
+                                <Column id="submittedOn">
+                                    <Text
+                                        id="submittedss"
+                                        text="Target Date"
+                                    />
+                                </Column>
+                                 <Column id="submittedOn2">
+                                    <Text
+                                        id="submittedss33"
+                                        text="Total No of Attendance"
+                                    />
+                                </Column>
+
+                            </columns>
+                            <items>
+                                <ColumnListItem id="insideTableData" type="Navigation"
+                                    press="onClickRcntPOTableRow">
+                                    <cells>
+                                        <Text
+                                            id="Invoices"
+                                            text="{recentPo>Ebeln}"
+                                        />
+                                        <Text
+                                            id="dueDatess"
+                                            text="{recentPo>Bedat}"
+                                        />
+                                        <!-- <Text
+                                            id="dueDatess"
+                                            text="{
+                                                path : 'recentPo>Bedat',
+                                                type: 'sap.ui.model.type.Date', 
+                                                formatOptions: { pattern: 'yyyy/MM/dd' }
+                                            }"
+                                        /> -->
+                                        <Text
+                                            id="statusss"
+                                            text="{recentPo>status}"
+                                        />
+                                        <Text
+                                            id="invoiceValuess"
+                                            text="{recentPo>netwr}"
+                                        />
+                                        <Text
+                                            id="submittedByy"
+                                            text="{recentPo>Waers}"
+                                        />
+                                        <!-- <Text
+                                        id="submittedOnn"
+                                        text="{recentPo>submittedon}"
+                                    /> -->
+                                        <!-- <Text id="attachmentsss"  text="{poData>price}"/> -->
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+
+                    </VBox>
 		</Panel>
- <Bar class="bar">
- <contentRight>
+ 
+</content>
+<footer>
+<Toolbar class="bar">
+<ToolbarSpacer id="_IDGenToolbarSpacer1" />
+ <Button id='dashbaord'   class="create"  type="Accept" text='Dashboard' icon="sap-icon://bbyd-dashboard" press="onPressCreate"/>
  	 <Button id='create' class="create"  type="Emphasized" text='Create Proposal Ticket' icon="sap-icon://create-form" press="onPressCreate"/>
- </contentRight>
- </Bar>
-        </content>
+ </Toolbar>
+    </footer>
     </Page>
 </mvc:View>
