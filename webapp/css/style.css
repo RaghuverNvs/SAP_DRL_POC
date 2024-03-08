@@ -182,3 +182,59 @@
   
 
 }
+.detailsBoxStyles{
+  margin: 4px;
+  padding: 3px;
+}
+
+.submitBtn{
+  margin-left: 150px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.cardStyles1{
+  margin-left: 410px;
+  margin-top: 95px;
+}
+.logoclass{
+  margin-left: 180px;
+  margin-top: 20px;
+}
+.usernameStyle{
+  margin-bottom: 5px;
+}
+.usernameStyle2{
+  margin-top: 4px;
+}
+.readOnlyEventDetails{
+  margin-left: 107px
+}
+.readOnlyProsposedDetails{
+  margin-left: 60px
+}
+.heading3 {
+  padding-left: 10px;
+  margin-top: 10px;
+  font-size: 26px;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.heading2{
+  font-size: 16px;
+  font-weight: bold;
+}
+.insidePart{
+  padding-left: 45.8%;
+}
+.insidePart1{
+  padding-left: 46.8%;
+}
+.noteStyles22{
+  padding-left: 147px;
+}
+.quotation{
+  padding-left: 44% ;
+}

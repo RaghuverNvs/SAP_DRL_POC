@@ -1,0 +1,57 @@
+<mvc:View controllerName="drlpoc.controller.loginPage"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:card="sap.f.cards"
+    xmlns:w="sap.ui.integration.widgets"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:smartForm="sap.ui.comp.smartform"
+    xmlns:smartField="sap.ui.comp.smartfield"
+    >
+    <Page id="page" title="">
+        <content>
+       <f:Card
+                id="_IDGenCard12"
+                class="cardStyles1"
+                width="auto"
+                height="auto"
+
+            >
+                <f:content>
+                    <VBox
+                    >
+                        <Image src="../images/logo2.png" width="200px" class ="logoclass"/>
+                    
+                    <HBox
+                        id="_IDGenHBox444"
+                        class="detailsBoxStyles"
+                    >
+                        <VBox id="_IDGenVBox14" class="sapUiSmallMarginBegin sapUiMediumMarginTop sapUiSmallMarginEnd">
+                            <Title
+                                id="_IDGenText14"
+                                text="Username" 
+                                class ="usernameStyle"/>
+                            <Input type="Text" width="500px" class="usernameStyle"/>
+                            <VBox id="_IDGenVBox1234" class= "usernameStyle2">
+                                <Title
+                                    id="_IDGenText14344"
+                                    text="Password" class ="usernameStyle"/>
+                                <Input type="Password" width="500px" />
+                            </VBox>
+                            <Button
+                                id='dashboard'
+                                text='Login'
+                                class="submitBtn"
+                                width="200px"
+                                type="Emphasized"
+                                press="onLogin"
+                            />
+                        </VBox>
+                    </HBox>
+                </VBox>
+                </f:content>
+            </f:Card>
+        </content>
+    </Page>
+</mvc:View>

@@ -95,22 +95,53 @@
           "name": "Screen1",
           "pattern": "",
           "target": [
-              "Screen1"
+            "Screen1"
           ]
-      }
+        },
+        {
+          "name": "Screen2",
+          "pattern": "createProposal",
+          "target": [
+            "Screen2"
+          ]
+        },
+        {
+          "name": "Screen3",
+          "pattern": "invoiceUpload",
+          "target": [
+            "Screen3"
+          ]
+        },
+        {
+          "name": "Screen4",
+          "pattern": "dashboard",
+          "target": [
+            "Screen4"
+          ]
+        }
       ],
       "targets": {
         "Screen1": {
           "viewId": "Screen1",
+          "viewName": "loginPage"
+        },
+        "Screen2": {
+          "viewId": "Screen2",
           "viewName": "createProposal"
-      }
+        },
+        "Screen3": {
+          "viewId": "Screen3",
+          "viewName": "invoiceUpload"
+        },
+        "Screen4": {
+          "viewId": "Screen4",
+          "viewName": "dashboard"
+        }
       }
     },
     "rootView": {
       "viewName": "drlpoc.view.App",
-      "type": "XML",
-      "async": true,
-      "id": "App"
+      "type": "XML"
     }
   },
   "sap.cloud": {

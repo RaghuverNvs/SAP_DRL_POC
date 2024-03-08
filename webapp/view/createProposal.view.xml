@@ -111,7 +111,7 @@
              <f:Card
                         id="_IDGenCard1dfsf"
                         width="400px"
-                        height="235px"
+                        height="260px"
                         class="cardStyles"  >
                         <f:header>
                             <card:Header
@@ -194,7 +194,7 @@
                     <f:Card
                         id="_IDGenCard1dfsf1"
                         width="400px"
-                        height="235px"
+                        height="260px"
                         class="cardStyles"  >
                         <f:header>
                             <card:Header
@@ -269,6 +269,18 @@
                                         enabled="false"
                                     />
                                 </HBox>
+                                <HBox id="_IDGenHBox5235" class="">
+                                   <Label
+                                        id="_IDGenText33214"
+                                        text="Currency"
+                                    />
+                                   <Input
+                                        id="_IDGenText621123"
+                                        class="noteStyles22"
+                                        value="INR"
+                                        enabled="false"
+                                    />
+                                </HBox>
                             </VBox>
                         </f:content>
                     </f:Card>
@@ -308,12 +320,12 @@
                                         text="Proposed Budget"
                                     />
                                 </Column>
-                                <Column id="submittedBy">
+                                <!-- <Column id="submittedBy">
                                     <Text
                                         id="submitted"
                                         text="Status"
                                     />
-                                </Column>
+                                </Column> -->
                                 <Column id="submittedOn">
                                     <Text
                                         id="submittedss"
@@ -323,7 +335,7 @@
                                  <Column id="submittedOn2">
                                     <Text
                                         id="submittedss33"
-                                        text="Total No of Attendance"
+                                        text="Total No of Attendees"
                                     />
                                 </Column>
 

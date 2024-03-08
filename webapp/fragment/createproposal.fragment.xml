@@ -99,7 +99,7 @@
                             >
                                 <Text
                                     id="a1"
-                                    text="Total No of Attendance"
+                                    text="Total No of Attendees"
                                 />
                                 <Input id="inpNOBw" />
                             </VBox>
@@ -243,7 +243,12 @@
                                 value="0.00"  />
                             </HBox>
                 
-                
+                <HBox class="quotation">
+                    <VBox id="subVbox14555" class="sapUiTinyMarginBeginEnd">
+                                <Text id="d1555" text="Quotation"></Text>
+                                <unified:FileUploader id="invDoc" />
+                            </VBox>    
+                </HBox>
             </VBox>
         </VBox>
         <footer>

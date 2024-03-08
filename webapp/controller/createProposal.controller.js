@@ -52,7 +52,13 @@ sap.ui.define([
 
             },
             onPressCreate:function(){
-                this.pDialog ??= this.loadFragment({
+                if (this.pDialog) {
+                    this.pDialog.then((oDialog) => {
+                        oDialog.close();
+                        oDialog.destroy();
+                    });
+                }
+                this.pDialog = this.loadFragment({
                     name: "drlpoc.fragment.createproposal"     
                 },
                 );

@@ -1,0 +1,156 @@
+<core:FragmentDefinition xmlns:table="sap.ui.table" xmlns:unified="sap.ui.unified"
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core">
+   <Dialog
+      id="submitInv"
+      title="Submit Invoice" contentWidth="85%" contentHeight="95%">
+      <content>
+            <VBox id="submitVboxPopUp34545" >
+                <FlexBox id="fbox1555" class="tabs mySamplePadding">
+                    <VBox id="vbox1555">
+                        <Label id="h1" text="Invoice Details" class="headdingNames" />
+                        <HBox id="hbox445" class="container" >
+                            <VBox id="subVbox1155" class="sapUiTinyMarginBeginEnd">
+                                <Text id="a1444" text="Invoice No"></Text>
+                                <Input id="invNo" />
+                            </VBox>
+                            <VBox id="subVbox125" class="sapUiTinyMarginBeginEnd">
+                                <Text id="b1444" text="Invoice Date"></Text>
+                                <DatePicker id="invDate"></DatePicker>
+                            </VBox>
+                            <VBox id="subVbox135" class="sapUiTinyMarginBeginEnd">
+                                <Text id="c1555" text="Invoice Due Date"></Text>
+                                <DatePicker id="invDueDate"></DatePicker>
+                            </VBox>
+                            <VBox id="subVbox14555" class="sapUiTinyMarginBeginEnd">
+                                <Text id="d1555" text="Invoice Document"></Text>
+                                <unified:FileUploader id="invDoc" />
+                            </VBox>                            
+                        </HBox>
+                    </VBox>                    
+                </FlexBox>
+
+                <FlexBox id="fbox255" class="tabs mySamplePadding">
+                    <VBox id="vbox2555">
+                        <Label id="h55" text="Select Line Items" class="headdingNames" />
+                        <Table id="lineItem555s">
+                            <columns>
+                                <Column ><Label text="" /></Column>
+                                <Column ><Label text="Item"/></Column>
+                                <Column ><Label text="Description" /></Column>
+                                <Column ><Label text="Ordered Qty" /></Column>
+                                <Column ><Label text="Billed Qty" /></Column>
+                                <Column ><Label text="Invoice Qty" /></Column>
+                                <Column ><Label text="Price" /></Column>
+                                <Column ><Label text="Tax Rate" /></Column>
+                                <Column ><Label text="Tax Amount" /></Column>
+                                <Column ><Label text="Total" /></Column>
+                                <Column ><Label text="Status" /></Column>
+                            </columns>
+
+                            <!-- <columns> -->
+                                <!-- <Column ><Label text="" /></Column>
+                                <Column ><Label text="Item"/></Column>
+                                <Column ><Label text="Description" /></Column>
+                                <Column ><Label text="Ordered Qty" /></Column>
+                                <Column ><Label text="Billed Qty" /></Column>
+                                <Column ><Label text="Invoice Qty" /></Column>
+                                <Column ><Label text="Price" /></Column>
+                                <Column ><Label text="Tax Rate" /></Column>
+                                <Column ><Label text="Tax Amount" /></Column>
+                                <Column ><Label text="Total" /></Column>
+                                <Column ><Label text="Status" /></Column> -->
+                                <!-- <Label text="12"/>
+                                <Label text="12"/>
+                                <Label text="12"/>
+                                <Label text="12"/>
+                                <Label text="12"/>
+                                <Label text="12"/>
+                                <Label text="12"/> -->
+                                
+                            <!-- </columns> -->
+
+
+                            <!-- <items>
+                                <ColumnListItem >
+                                    <cells ><Text text="{CategoryID}"></Text></cells>
+                                    <cells ><Text text="{CategoryName}"></Text></cells>
+                                    <cells ><ImageContent src="{Picture}" description="{Description}" ></ImageContent></cells>
+                                    <cells ><ImageContent src="test-resources/sap/m/demokit/sample/ImageContent/images/SAPLogoLargeTile_28px_height.png" description="{Description}" ></ImageContent></cells>
+                                    
+                                    <cells ><Image activeSrc="{Picture}"></Image></cells>
+                                </ColumnListItem>
+                            </items> -->
+
+
+
+                        </Table>
+                    </VBox>
+                </FlexBox>
+
+                <FlexBox id="fbox3555" class="tabs mySamplePadding">
+                    <VBox id="vbox3555">
+                        <Label id="h3555" text="Purchase Order Items Added to Invoice" class="headdingNames" />
+                        <Table id="lineItems155555">
+                            <columns>
+                                <Column ><Label text="" /></Column>
+                                <Column ><Label text="Item"/></Column>
+                                <Column ><Label text="Description" /></Column>
+                                <Column ><Label text="Ordered Qty" /></Column>
+                                <Column ><Label text="Billed Qty" /></Column>
+                                <Column ><Label text="Invoice Qty" /></Column>
+                                <Column ><Label text="Price" /></Column>
+                                <Column ><Label text="Tax Rate" /></Column>
+                                <Column ><Label text="Tax Amount" /></Column>
+                                <Column ><Label text="Total" /></Column>
+                                <Column ><Label text="Status" /></Column>
+                            </columns>
+
+                            <!-- <columns> -->
+                                <!-- <Column ><Label text="" /></Column>
+                                <Column ><Label text="Item"/></Column>
+                                <Column ><Label text="Description" /></Column>
+                                <Column ><Label text="Ordered Qty" /></Column>
+                                <Column ><Label text="Billed Qty" /></Column>
+                                <Column ><Label text="Invoice Qty" /></Column>
+                                <Column ><Label text="Price" /></Column>
+                                <Column ><Label text="Tax Rate" /></Column>
+                                <Column ><Label text="Tax Amount" /></Column>
+                                <Column ><Label text="Total" /></Column>
+                                <Column ><Label text="Status" /></Column> -->
+                                <!-- <Label text="12"/>
+                                <Label text="12"/>
+                                <Label text="12"/>
+                                <Label text="12"/>
+                                <Label text="12"/>
+                                <Label text="12"/>
+                                <Label text="12"/> -->
+                                
+                            <!-- </columns> -->
+
+
+                            <!-- <items>
+                                <ColumnListItem >
+                                    <cells ><Text text="{CategoryID}"></Text></cells>
+                                    <cells ><Text text="{CategoryName}"></Text></cells>
+                                    <cells ><ImageContent src="{Picture}" description="{Description}" ></ImageContent></cells>
+                                    <cells ><ImageContent src="test-resources/sap/m/demokit/sample/ImageContent/images/SAPLogoLargeTile_28px_height.png" description="{Description}" ></ImageContent></cells>
+                                    
+                                    <cells ><Image activeSrc="{Picture}"></Image></cells>
+                                </ColumnListItem>
+                            </items> -->
+
+                        </Table>
+                    </VBox>
+                </FlexBox>
+            </VBox>
+      </content>
+	  <footer>
+          <Toolbar>
+            <ToolbarSpacer/>
+            <Button id="btnClose" type="Reject"  text="Cancel" press="onCloseSubmitInv"></Button>
+            <Button id="btnCloset" type="Emphasized" text="Submit" press="onCloseSubmitInv"></Button>
+          </Toolbar>
+        </footer>
+      </Dialog>
+</core:FragmentDefinition>

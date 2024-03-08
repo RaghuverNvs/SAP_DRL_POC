@@ -11,92 +11,232 @@
     >
     <Page id="page" title="{i18n>title}"  class="homePageBackground" titleAlignment="Center">
         <content>
-        <Label class="heading3 H4" text="Invoice Upload"/>
+        <Label class="heading3" text="Invoice Upload"/>
              	<Panel>
 				
             <HBox>
-             <f:Card
-                id="_IDGenCard3"
-                class="cardStyles"
-                width="279px"
-                height="92px"
-            >
-                <f:header>
-                    <card:Header
-                        id="_IDGenHeader3"
-                        title="Name of the Medical Representative"
-                    />
-                </f:header>
-                <f:content>
+               <VBox id="submitVboxPopUp">
+                <Label text="Proposal Details" class="heading2"/>
+                <FlexBox
+                    id="fbox1"
+                    class="tabs mySamplePadding"
+                >
+                    <VBox id="vbox1">
                         <HBox
-                            id="_IDGenHBox8"
-                            class="hBoxStyles"
+                            id="hbox"
+                            class="container"
                         >
-                            <Input
-                                id="_IDGenLabel4"
-                                value="Chandra"
-                                class="meduimLabelMargin" 
-                                enabled="false"
-                            />      
+                            <VBox
+                                id="subVbox11"
+                                class="sapUiMediumMarginBeginEnd"
+                            >
+                                <Text
+                                    id="a"
+                                    text="Name of Event"
+                                />
+                                <Input id="inpNOB" enabled="false"/>
+                            </VBox>
+                            <VBox
+                                id="subVbox12"
+                                class="sapUiMediumMarginBeginEnd"
+                            >
+                                <Text
+                                    id="b"
+                                    text="Total Budget Allocated"
+                                />
+                                <Input
+                                    id="inpTB"
+                                    type="Number"
+                                    enabled="false"
+                                />
+                            </VBox>
+                             <VBox
+                                id="subVbox11e"
+                                 class="sapUiMediumMarginBeginEnd"
+                            >
+                                <Text
+                                    id="a1"
+                                    text="Total No of Attendees"
+                                />
+                                <Input id="inpNOBw" enabled="false"/>
+                            </VBox>
+                            <VBox
+                                id="subVbox15"
+                                class="sapUiMediumMarginBeginEnd"
+                            >
+                                <Text
+                                    id="e"
+                                    text="Created Date"
+                                />
+                                <DatePicker
+                                    id="inpCD"
+                                    enabled="false"
+                                />
+                            </VBox>
+                            <VBox
+                                id="subVbox16"
+                                 class="sapUiMediumMarginBeginEnd"
+                            >
+                                <Text
+                                    id="f"
+                                    text="Targeted Date"
+                                />
+                                <DatePicker id="inpTD" enabled="false"/>
+                            </VBox>
+                               <VBox
+                                id="subVbox11e2"
+                                 class="sapUiMediumMarginBeginEnd"
+                            >
+                                <Text
+                                    id="a12"
+                                    text="Duration"
+                                />
+                                <Select
+                                    id="_IDGenSelect1"
+                                    forceSelection="false"
+                                    enabled="false"
+                                    selectedKey="{/SelectedProduct}"
+                                    items="{
+						path: '/ProductCollection',
+						sorter: { path: 'Name' }
+					}"
+                                >
+                                    <core:Item
+                                        id="_IDGenItem1"
+                                        key="{cuurencyId}"
+                                        text="{Name}"
+                                    />
+                                </Select>
+                            </VBox>
+                           <VBox
+                                id="subVbox13"
+                                class="readOnlyEventDetails"
+                            >
+                                <Text
+                                    id="c"
+                                    text="Event Details"
+                                />
+                                <TextArea
+                                    id="inpAG"
+                                    rows="2"
+                                    enabled="false"
+                                />
+                            </VBox>
+                            <VBox
+                                id="subVbox14"
+                                class="readOnlyProsposedDetails"
+                            >
+                                <Text
+                                    id="d"
+                                    text="Proposed Budget"
+                                />
+                                <TextArea
+                                    id="inpPBL"
+                                    rows="2"
+                                    enabled="false"
+                                />
+                            </VBox>
                         </HBox>
-                            
-                </f:content>
-            </f:Card>
-              <f:Card
-                id="_IDGenCard33"
-                class="cardStyles"
-                width="272px"
-                height="92px">
-                <f:header>
-                    <card:Header
-                        id="_IDGenHeader33"
-                        title="Medical Representative ID"
-                    />
-                </f:header>
-                <f:content>
-                        <HBox
-                            id="_IDGenHBox83"
-                            class="hBoxStyles"
-                        >
-                            <Input
-                                id="_IDGenLabel44"
-                                value="3574"
-                                class="meduimLabelMargin" 
-                                enabled="false"
-                            />      
-                        </HBox>
-                            
-                </f:content>
-            </f:Card>
-
-              <f:Card
-                id="_IDGenCard35"
-                class="cardStyles"
-                width="272px"
-                height="92px">
-                <f:header>
-                    <card:Header
-                        id="_IDGenHeader35"
-                        title="Reporting Manager"
-                    />
-                </f:header>
-                <f:content>
-                        <HBox
-                            id="_IDGenHBox85"
-                            class="hBoxStyles"
-                        >
-                            <Input
-                                id="_IDGenLabel45"
-                                value="Siddu"
-                                class="meduimLabelMargin" 
-                                enabled="false"
-                            />      
-                        </HBox>
-                            
-                </f:content>
-            </f:Card>
+                    </VBox>
+                </FlexBox>
+            </VBox>
             </HBox>
+            <HBox>
+            <Label text="LineItems" class="heading2"/>
+            </HBox>
+                   <HBox class="tabs mySamplePadding">
+                        <Table
+                        alternateRowColors="true"
+                        id="taxTable"
+                        class="customTable"
+                        includeItemInSelection="true"
+                        itemPress="handleItemPress"
+                    >
+                        <columns>
+                            <Column id="_IDGenColumn1">
+                                <Text
+                                    id="_IDGenText12"
+                                    text="Items"
+                                />
+                            </Column>
+                            <Column id="_IDGenColumn2">
+                                <Text
+                                    id="_IDGenText13"
+                                    text="Items Description"
+                                />
+                            </Column>
+                            <Column id="_IDGenColumn3">
+                                <Text
+                                    class="textStyles"
+                                    id="_IDGenText14"
+                                    text="Price"
+                                />
+                            </Column>
+                            <Column id="taxableAmt">
+                                <Text
+                                    id="_IDGenText15"
+                                    text="Taxable Rate"
+                                />
+                            </Column>
+                            <Column id="_IDGenColumn4">
+                                <Text
+                                    id="_IDGenText16"
+                                    text="Total"
+                                />
+                            </Column>
+                            <!-- <Column id="_IDGenColumn5">
+                                            <Text
+                                                id="_IDGenText17"
+                                                text="Remarks"
+                                            />
+                                        </Column> -->
+                        </columns>
+                    </Table>
+                </HBox>
+           <VBox>
+             <HBox justifyContent="Center">
+                    <Label
+                        text="Payment Mode"
+                    />
+                </HBox>
+                <HBox class="insidePart">
+                    <RadioButton
+                        text="Cooperate Credit Card "
+                        selected="true" 
+                    />
+                    <RadioButton
+                        text="Net Banking"    
+                    />
+                    <RadioButton
+                        text="UPI"    
+                    />
+                    <RadioButton
+                        text="Cash"  
+                    />
+                </HBox>
+                <HBox justifyContent="Center">
+                    <Label
+                                id="_IDGenLabel103"
+                                text="Total Invoice Amount"
+                                class="totalInvoice"/>
+                            </HBox>
+                            <HBox class="insidePart1">
+                                 <Input
+                                id="totalInvioceAmt"
+                                placeholder="0.00"
+                                description="INR"
+                                width="400px"
+                                editable="false"
+                                value="0.00"  />
+                            </HBox>
+           </VBox>
 		</Panel>
         </content>
+        <footer>
+<Toolbar class="bar">
+<ToolbarSpacer id="_IDGenToolbarSpacer129999999" />
+ 	 <Button id='create33' class="create"  type="Emphasized" text='Submit Invoice' icon="sap-icon://create-form" press="onOpenSubmitInv"/>
+ </Toolbar>
+    </footer>
     </Page>
 </mvc:View>
