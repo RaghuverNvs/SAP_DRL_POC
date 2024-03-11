@@ -8,149 +8,140 @@
     xmlns:core="sap.ui.core"
     xmlns:smartForm="sap.ui.comp.smartform"
     xmlns:smartField="sap.ui.comp.smartfield"
-    >
-    <Page id="page" title="{i18n>title}"  class="homePageBackground" titleAlignment="Center">
+>
+    <Page id="page" title="{i18n>title}" class="homePageBackground" titleAlignment="Center">
         <content>
-        <Label class="heading3" text="Invoice Upload"/>
-             	<Panel>
-				
-            <HBox>
-               <VBox id="submitVboxPopUp">
-                <Label text="Proposal Details" class="heading2"/>
-                <FlexBox
-                    id="fbox1"
-                    class="tabs mySamplePadding"
-                >
-                    <VBox id="vbox1">
-                        <HBox
-                            id="hbox"
-                            class="container"
+            <Label class="heading3" text="Invoice Upload" />
+            <Panel>
+
+                <HBox>
+                    <VBox id="submitVboxPopUp">
+                        <Label text="Proposal Details" class="heading2" />
+                        <FlexBox
+                            id="fbox1"
+                            class="tabs mySamplePadding"
                         >
-                            <VBox
-                                id="subVbox11"
-                                class="sapUiMediumMarginBeginEnd"
-                            >
-                                <Text
-                                    id="a"
-                                    text="Name of Event"
-                                />
-                                <Input id="inpNOB" enabled="false"/>
-                            </VBox>
-                            <VBox
-                                id="subVbox12"
-                                class="sapUiMediumMarginBeginEnd"
-                            >
-                                <Text
-                                    id="b"
-                                    text="Total Budget Allocated"
-                                />
-                                <Input
-                                    id="inpTB"
-                                    type="Number"
-                                    enabled="false"
-                                />
-                            </VBox>
-                             <VBox
-                                id="subVbox11e"
-                                 class="sapUiMediumMarginBeginEnd"
-                            >
-                                <Text
-                                    id="a1"
-                                    text="Total No of Attendees"
-                                />
-                                <Input id="inpNOBw" enabled="false"/>
-                            </VBox>
-                            <VBox
-                                id="subVbox15"
-                                class="sapUiMediumMarginBeginEnd"
-                            >
-                                <Text
-                                    id="e"
-                                    text="Created Date"
-                                />
-                                <DatePicker
-                                    id="inpCD"
-                                    enabled="false"
-                                />
-                            </VBox>
-                            <VBox
-                                id="subVbox16"
-                                 class="sapUiMediumMarginBeginEnd"
-                            >
-                                <Text
-                                    id="f"
-                                    text="Targeted Date"
-                                />
-                                <DatePicker id="inpTD" enabled="false"/>
-                            </VBox>
-                               <VBox
-                                id="subVbox11e2"
-                                 class="sapUiMediumMarginBeginEnd"
-                            >
-                                <Text
-                                    id="a12"
-                                    text="Duration"
-                                />
-                                <Select
-                                    id="_IDGenSelect1"
-                                    forceSelection="false"
-                                    enabled="false"
-                                    selectedKey="{/SelectedProduct}"
-                                    items="{
-						path: '/ProductCollection',
-						sorter: { path: 'Name' }
-					}"
+                            <VBox id="vbox1">
+                                <HBox
+                                    id="hbox"
+                                    class="container"
                                 >
-                                    <core:Item
-                                        id="_IDGenItem1"
-                                        key="{cuurencyId}"
-                                        text="{Name}"
-                                    />
-                                </Select>
+                                    <VBox
+                                        id="subVbox11"
+                                        class="sapUiMediumMarginBeginEnd"
+                                    >
+                                        <Text
+                                            id="a"
+                                            text="Name of Event"
+                                        />
+                                        <Input id="inpNOB" enabled="false"
+                                            value="{invModel>/propalDetails/nameOfEvent}" />
+                                    </VBox>
+                                    <VBox
+                                        id="subVbox12"
+                                        class="sapUiMediumMarginBeginEnd"
+                                    >
+                                        <Text
+                                            id="b"
+                                            text="Total Budget Allocated"
+                                        />
+                                        <Input
+                                            id="inpTB"
+                                            type="Number"
+                                            enabled="false"
+                                            value="{invModel>/propalDetails/budgetAllc}"
+                                        />
+                                    </VBox>
+                                    <VBox
+                                        id="subVbox11e"
+                                        class="sapUiMediumMarginBeginEnd"
+                                    >
+                                        <Text
+                                            id="a1"
+                                            text="Total No of Attendees"
+                                        />
+                                        <Input id="inpNOBw" enabled="false"
+                                            value="{invModel>/propalDetails/tot_attendees}" />
+                                    </VBox>
+                                    <VBox
+                                        id="subVbox15"
+                                        class="sapUiMediumMarginBeginEnd"
+                                    >
+                                        <Text
+                                            id="e"
+                                            text="Created Date"
+                                        />
+                                        <DatePicker
+                                            id="inpCD"
+                                            enabled="false"
+                                            value="{invModel>/propalDetails/date}"
+                                        />
+                                    </VBox>
+                                    <VBox
+                                        id="subVbox16"
+                                        class="sapUiMediumMarginBeginEnd"
+                                    >
+                                        <Text
+                                            id="f"
+                                            text="Targeted Date"
+                                        />
+                                        <DatePicker id="inpTD" enabled="false" value="{invModel>/propalDetails/targetDate}"/>
+                                    </VBox>
+                                    <VBox
+                                        id="subVbox11e2"
+                                        class="sapUiMediumMarginBeginEnd"
+                                    >
+                                        <Text
+                                            id="a12"
+                                            text="Duration"
+                                        />
+                                        <Input id="inpNOBweee" enabled="false"
+                                            value="{invModel>/propalDetails/duration}" />
+                                    </VBox>
+                                    <VBox
+                                        id="subVbox13"
+                                        class="readOnlyEventDetails"
+                                    >
+                                        <Text
+                                            id="c"
+                                            text="Event Details"
+                                        />
+                                        <TextArea
+                                            id="inpAG"
+                                            rows="2"
+                                            enabled="false"
+                                            value="{invModel>/propalDetails/eDetails}"
+                                        />
+                                    </VBox>
+                                    <VBox
+                                        id="subVbox14"
+                                        class="readOnlyProsposedDetails"
+                                    >
+                                        <Text
+                                            id="d"
+                                            text="Proposed Budget"
+                                        />
+                                        <TextArea
+                                            id="inpPBL"
+                                            rows="2"
+                                            enabled="false"
+                                            value="{invModel>/propalDetails/propBudget}"
+                                        />
+                                    </VBox>
+                                </HBox>
                             </VBox>
-                           <VBox
-                                id="subVbox13"
-                                class="readOnlyEventDetails"
-                            >
-                                <Text
-                                    id="c"
-                                    text="Event Details"
-                                />
-                                <TextArea
-                                    id="inpAG"
-                                    rows="2"
-                                    enabled="false"
-                                />
-                            </VBox>
-                            <VBox
-                                id="subVbox14"
-                                class="readOnlyProsposedDetails"
-                            >
-                                <Text
-                                    id="d"
-                                    text="Proposed Budget"
-                                />
-                                <TextArea
-                                    id="inpPBL"
-                                    rows="2"
-                                    enabled="false"
-                                />
-                            </VBox>
-                        </HBox>
+                        </FlexBox>
                     </VBox>
-                </FlexBox>
-            </VBox>
-            </HBox>
-            <HBox>
-            <Label text="LineItems" class="heading2"/>
-            </HBox>
-                   <HBox class="tabs mySamplePadding">
-                        <Table
+                </HBox>
+                <HBox>
+                    <Label text="LineItems" class="heading2" />
+                </HBox>
+                <HBox class="tabs mySamplePadding">
+                    <Table
                         alternateRowColors="true"
                         id="taxTable"
                         class="customTable"
-                        includeItemInSelection="true"
-                        itemPress="handleItemPress"
+                        items="{invLineModel>/lineItems}"
                     >
                         <columns>
                             <Column id="_IDGenColumn1">
@@ -184,59 +175,80 @@
                                     text="Total"
                                 />
                             </Column>
-                            <!-- <Column id="_IDGenColumn5">
-                                            <Text
-                                                id="_IDGenText17"
-                                                text="Remarks"
-                                            />
-                                        </Column> -->
                         </columns>
+                        <items>
+                            <ColumnListItem id="insideTableData">
+                                <cells>
+                                    <Text
+                                        id="Invoices"
+                                        text="{invLineModel>itemsName}"
+                                    />
+                                    <Text
+                                        id="dueDatess"
+                                        text="{invLineModel>itemsDescription}"
+                                    />
+                                    <Text
+                                        id="statusss"
+                                        text="{invLineModel>price}"
+                                    />
+                                    <Text
+                                        id="invoiceValuess"
+                                        text="{invLineModel>rate}"
+                                    />
+                                    <Text
+                                        id="submittedByy"
+                                        text="{invLineModel>total}"
+                                    />
+                                </cells>
+                            </ColumnListItem>
+                        </items>
                     </Table>
                 </HBox>
-           <VBox>
-             <HBox justifyContent="Center">
-                    <Label
-                        text="Payment Mode"
-                    />
-                </HBox>
-                <HBox class="insidePart">
-                    <RadioButton
-                        text="Cooperate Credit Card "
-                        selected="true" 
-                    />
-                    <RadioButton
-                        text="Net Banking"    
-                    />
-                    <RadioButton
-                        text="UPI"    
-                    />
-                    <RadioButton
-                        text="Cash"  
-                    />
-                </HBox>
-                <HBox justifyContent="Center">
-                    <Label
-                                id="_IDGenLabel103"
-                                text="Total Invoice Amount"
-                                class="totalInvoice"/>
-                            </HBox>
-                            <HBox class="insidePart1">
-                                 <Input
-                                id="totalInvioceAmt"
-                                placeholder="0.00"
-                                description="INR"
-                                width="400px"
-                                editable="false"
-                                value="0.00"  />
-                            </HBox>
-           </VBox>
-		</Panel>
+                <VBox>
+                    <HBox justifyContent="Center">
+                        <Label
+                            text="Payment Mode"
+                        />
+                    </HBox>
+                    <HBox class="insidePart">
+                        <RadioButton
+                            text="Cooperate Credit Card "
+                            selected="true"
+                        />
+                        <RadioButton
+                            text="Net Banking"
+                        />
+                        <RadioButton
+                            text="UPI"
+                        />
+                        <RadioButton
+                            text="Cash"
+                        />
+                    </HBox>
+                    <HBox justifyContent="Center">
+                        <Label
+                            id="_IDGenLabel103"
+                            text="Total Invoice Amount"
+                            class="totalInvoice" />
+                    </HBox>
+                    <HBox class="insidePart1">
+                        <Input
+                            id="totalInvioceAmt"
+                            placeholder="0.00"
+                            description="INR"
+                            width="400px"
+                            editable="false"
+                            value="0.00" />
+                    </HBox>
+                </VBox>
+            </Panel>
         </content>
         <footer>
-<Toolbar class="bar">
-<ToolbarSpacer id="_IDGenToolbarSpacer129999999" />
- 	 <Button id='create33' class="create"  type="Emphasized" text='Submit Invoice' icon="sap-icon://create-form" press="onOpenSubmitInv"/>
- </Toolbar>
-    </footer>
+            <Toolbar class="bar">
+                <ToolbarSpacer id="_IDGenToolbarSpacer129999999" />
+                <Button id='create33' class="create" type="Emphasized" text='Submit Invoice'
+                    icon="sap-icon://create-form" press="onOpenSubmitInv" />
+            </Toolbar>
+        </footer>
     </Page>
 </mvc:View>

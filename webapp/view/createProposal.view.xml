@@ -291,7 +291,7 @@
                             alternateRowColors="true"
                             headerText="Recent Budget"
                             id="productsTable"
-                            items="{recentPo>/}"
+                            items="{eventModel>/events}"
                             backgroundDesign="Translucent"
                             class="customTable">
                             <columns>
@@ -320,12 +320,6 @@
                                         text="Proposed Budget"
                                     />
                                 </Column>
-                                <!-- <Column id="submittedBy">
-                                    <Text
-                                        id="submitted"
-                                        text="Status"
-                                    />
-                                </Column> -->
                                 <Column id="submittedOn">
                                     <Text
                                         id="submittedss"
@@ -342,40 +336,32 @@
                             </columns>
                             <items>
                                 <ColumnListItem id="insideTableData" type="Navigation"
-                                    press="onClickRcntPOTableRow">
+                                    press="onClickPOTableRow">
                                     <cells>
                                         <Text
                                             id="Invoices"
-                                            text="{recentPo>Ebeln}"
+                                            text="{eventModel>nameOfEvent}"
                                         />
                                         <Text
                                             id="dueDatess"
-                                            text="{recentPo>Bedat}"
+                                            text="{eventModel>budgetAllc}"
                                         />
-                                        <!-- <Text
-                                            id="dueDatess"
-                                            text="{
-                                                path : 'recentPo>Bedat',
-                                                type: 'sap.ui.model.type.Date', 
-                                                formatOptions: { pattern: 'yyyy/MM/dd' }
-                                            }"
-                                        /> -->
                                         <Text
                                             id="statusss"
-                                            text="{recentPo>status}"
+                                            text="{eventModel>eDetails}"
                                         />
                                         <Text
                                             id="invoiceValuess"
-                                            text="{recentPo>netwr}"
+                                            text="{eventModel>propBudget}"
                                         />
                                         <Text
                                             id="submittedByy"
-                                            text="{recentPo>Waers}"
+                                            text="{eventModel>date}"
                                         />
-                                        <!-- <Text
+                                        <Text
                                         id="submittedOnn"
-                                        text="{recentPo>submittedon}"
-                                    /> -->
+                                        text="{eventModel>tot_attendees}"
+                                    />
                                         <!-- <Text id="attachmentsss"  text="{poData>price}"/> -->
                                     </cells>
                                 </ColumnListItem>
@@ -389,7 +375,7 @@
 <footer>
 <Toolbar class="bar">
 <ToolbarSpacer id="_IDGenToolbarSpacer1" />
- <Button id='dashbaord'   class="create"  type="Accept" text='Dashboard' icon="sap-icon://bbyd-dashboard" press="onPressCreate"/>
+ <Button id='dashbaord'   class="create"  type="Accept" text='Dashboard' icon="sap-icon://bbyd-dashboard" press="onDashboardPress"/>
  	 <Button id='create' class="create"  type="Emphasized" text='Create Proposal Ticket' icon="sap-icon://create-form" press="onPressCreate"/>
  </Toolbar>
     </footer>

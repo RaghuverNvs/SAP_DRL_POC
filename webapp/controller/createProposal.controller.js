@@ -5,16 +5,53 @@ sap.ui.define([
     "sap/ui/model/json/JSONModel",
     "sap/m/ComboBox",
     "sap/m/Input",
-    "sap/ui/core/ListItem"
+    "sap/ui/core/ListItem",
+    "sap/m/MessageBox"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller,ColumnListItem,Text,JSONModel,ComboBox,Input,ListItem) {
+    function (Controller,ColumnListItem,Text,JSONModel,ComboBox,Input,ListItem,MessageBox) {
         "use strict";
 
         return Controller.extend("drlpoc.controller.createProposal", {
             onInit: function () {
+
+                var mainData ={
+                    "events": [
+                      {
+                        "nameOfEvent": "Cardiology Meet",
+                        "budgetAllc": 100000,
+                        "eDetails": "Hyd Cardiology Meet",
+                        "propBudget": 10000,
+                        "date": "2024-01-11",
+                        "tot_attendees": 5
+                      },
+                      {
+                        "nameOfEvent": "Neurology Meet",
+                        "budgetAllc": 1076000,
+                        "eDetails": "South Neurology Meet",
+                        "propBudget": 54000,
+                        "date": "2024-01-11",
+                        "tot_attendees": 3
+                      },
+                      {
+                        "nameOfEvent": "Orthopedic Meet",
+                        "budgetAllc": 109800,
+                        "eDetails": "West Orthopedic Meet",
+                        "propBudget": 50000,
+                        "date": "2024-01-11",
+                        "tot_attendees": 4
+                      }
+                    ]
+                  }
+
+                  var eventModel = new sap.ui.model.json.JSONModel(mainData);
+                  this.getView().setModel(eventModel, "eventModel")
+
+
+
+                // Fragments data
                 var oData = {
                     "SelectedProduct": "2 Hrs",
 					"ProductCollection": [
@@ -68,6 +105,11 @@ sap.ui.define([
                 });
             },
             onCloseDialog() {
+                this.byId("createProposal").close();
+                
+            },
+            onCreateDialog: function(){
+                this.onSuccessMessageBoxPress()
                 this.byId("createProposal").close();
             },
             addRow: function () {
@@ -141,6 +183,20 @@ sap.ui.define([
                 var totalTaxAmt = oFormat.format(sum);
                 this.byId("totalInvioceAmt").setValue(totalTaxAmt);
             },
-
+            onSuccessMessageBoxPress: function () {
+                MessageBox.success("Proposal has been successfully created");
+            },
+            onClickPOTableRow : function(){
+                var routerObj = this.getOwnerComponent().getRouter();
+                routerObj.navTo("Screen3" 
+                // {
+                //   po_no: sModelPath
+                // }
+                );
+            },
+            onDashboardPress:function(){
+                var routerObj = this.getOwnerComponent().getRouter();
+                routerObj.navTo("Screen4"); 
+            }
         });
     });

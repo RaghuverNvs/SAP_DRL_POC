@@ -123,7 +123,7 @@
       "targets": {
         "Screen1": {
           "viewId": "Screen1",
-          "viewName": "dashboard"
+          "viewName": "loginPage"
         },
         "Screen2": {
           "viewId": "Screen2",

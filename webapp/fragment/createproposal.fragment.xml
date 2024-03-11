@@ -264,7 +264,7 @@
                     id="btnCloset"
                     type="Emphasized"
                     text="Create"
-                    press="onCloseDialog"
+                    press="onCreateDialog"
                     class="create"
                 />
             </Toolbar>

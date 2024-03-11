@@ -33,54 +33,25 @@
                 <FlexBox id="fbox255" class="tabs mySamplePadding">
                     <VBox id="vbox2555">
                         <Label id="h55" text="Select Line Items" class="headdingNames" />
-                        <Table id="lineItem555s">
+                        <Table id="lineItem555s" mode="MultiSelect" >
                             <columns>
-                                <Column ><Label text="" /></Column>
                                 <Column ><Label text="Item"/></Column>
-                                <Column ><Label text="Description" /></Column>
-                                <Column ><Label text="Ordered Qty" /></Column>
-                                <Column ><Label text="Billed Qty" /></Column>
-                                <Column ><Label text="Invoice Qty" /></Column>
-                                <Column ><Label text="Price" /></Column>
-                                <Column ><Label text="Tax Rate" /></Column>
-                                <Column ><Label text="Tax Amount" /></Column>
+                                <Column ><Label text="Items Description" /></Column>
+                                <Column ><Label text="Pice" /></Column>
+                                <Column ><Label text="Taxable Rate" /></Column>
                                 <Column ><Label text="Total" /></Column>
-                                <Column ><Label text="Status" /></Column>
                             </columns>
 
-                            <!-- <columns> -->
-                                <!-- <Column ><Label text="" /></Column>
-                                <Column ><Label text="Item"/></Column>
-                                <Column ><Label text="Description" /></Column>
-                                <Column ><Label text="Ordered Qty" /></Column>
-                                <Column ><Label text="Billed Qty" /></Column>
-                                <Column ><Label text="Invoice Qty" /></Column>
-                                <Column ><Label text="Price" /></Column>
-                                <Column ><Label text="Tax Rate" /></Column>
-                                <Column ><Label text="Tax Amount" /></Column>
-                                <Column ><Label text="Total" /></Column>
-                                <Column ><Label text="Status" /></Column> -->
-                                <!-- <Label text="12"/>
-                                <Label text="12"/>
-                                <Label text="12"/>
-                                <Label text="12"/>
-                                <Label text="12"/>
-                                <Label text="12"/>
-                                <Label text="12"/> -->
-                                
-                            <!-- </columns> -->
-
-
-                            <!-- <items>
+                            <items>
                                 <ColumnListItem >
-                                    <cells ><Text text="{CategoryID}"></Text></cells>
-                                    <cells ><Text text="{CategoryName}"></Text></cells>
-                                    <cells ><ImageContent src="{Picture}" description="{Description}" ></ImageContent></cells>
-                                    <cells ><ImageContent src="test-resources/sap/m/demokit/sample/ImageContent/images/SAPLogoLargeTile_28px_height.png" description="{Description}" ></ImageContent></cells>
+                                    <cells ><Text text="Travel Expenditure"></Text></cells>
+                                    <cells ><Text text="Stayed attocated Taj Hotel"></Text></cells>
+                                     <cells ><Text text="15000"></Text></cells>
+                                    <cells ><Text text="0"></Text></cells>
+                                     <cells ><Text text="15000"></Text></cells>
                                     
-                                    <cells ><Image activeSrc="{Picture}"></Image></cells>
                                 </ColumnListItem>
-                            </items> -->
+                            </items>
 
 
 
@@ -88,62 +59,28 @@
                     </VBox>
                 </FlexBox>
 
-                <FlexBox id="fbox3555" class="tabs mySamplePadding">
-                    <VBox id="vbox3555">
-                        <Label id="h3555" text="Purchase Order Items Added to Invoice" class="headdingNames" />
-                        <Table id="lineItems155555">
-                            <columns>
-                                <Column ><Label text="" /></Column>
-                                <Column ><Label text="Item"/></Column>
-                                <Column ><Label text="Description" /></Column>
-                                <Column ><Label text="Ordered Qty" /></Column>
-                                <Column ><Label text="Billed Qty" /></Column>
-                                <Column ><Label text="Invoice Qty" /></Column>
-                                <Column ><Label text="Price" /></Column>
-                                <Column ><Label text="Tax Rate" /></Column>
-                                <Column ><Label text="Tax Amount" /></Column>
-                                <Column ><Label text="Total" /></Column>
-                                <Column ><Label text="Status" /></Column>
-                            </columns>
-
-                            <!-- <columns> -->
-                                <!-- <Column ><Label text="" /></Column>
-                                <Column ><Label text="Item"/></Column>
-                                <Column ><Label text="Description" /></Column>
-                                <Column ><Label text="Ordered Qty" /></Column>
-                                <Column ><Label text="Billed Qty" /></Column>
-                                <Column ><Label text="Invoice Qty" /></Column>
-                                <Column ><Label text="Price" /></Column>
-                                <Column ><Label text="Tax Rate" /></Column>
-                                <Column ><Label text="Tax Amount" /></Column>
-                                <Column ><Label text="Total" /></Column>
-                                <Column ><Label text="Status" /></Column> -->
-                                <!-- <Label text="12"/>
-                                <Label text="12"/>
-                                <Label text="12"/>
-                                <Label text="12"/>
-                                <Label text="12"/>
-                                <Label text="12"/>
-                                <Label text="12"/> -->
-                                
-                            <!-- </columns> -->
-
-
-                            <!-- <items>
-                                <ColumnListItem >
-                                    <cells ><Text text="{CategoryID}"></Text></cells>
-                                    <cells ><Text text="{CategoryName}"></Text></cells>
-                                    <cells ><ImageContent src="{Picture}" description="{Description}" ></ImageContent></cells>
-                                    <cells ><ImageContent src="test-resources/sap/m/demokit/sample/ImageContent/images/SAPLogoLargeTile_28px_height.png" description="{Description}" ></ImageContent></cells>
-                                    
-                                    <cells ><Image activeSrc="{Picture}"></Image></cells>
-                                </ColumnListItem>
-                            </items> -->
-
-                        </Table>
-                    </VBox>
-                </FlexBox>
+              
             </VBox>
+             <HBox class="quotation1">
+                        <Label
+                            id="_IDGenLabel103www"
+                            text="Tax Id"
+                            class="totalInvoice" />
+                    </HBox>
+                    <HBox class="quotation2">
+                        <Input
+                            id="totalInvioceAmt33333"
+                            placeholder="tax00911"
+                            width="200px"
+                            editable="true"
+                            value="" />
+                    </HBox>
+                    <HBox class="quotation">
+                    <VBox id="subVbox14555eee" class="sapUiTinyMarginBeginEnd">
+                                <Text id="d1555eeeeee" text="Supporting Documents"></Text>
+                                <unified:FileUploader id="invDocsss" />
+                            </VBox>    
+                     </HBox>
       </content>
 	  <footer>
           <Toolbar>
