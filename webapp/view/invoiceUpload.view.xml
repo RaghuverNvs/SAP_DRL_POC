@@ -83,7 +83,7 @@
                                     >
                                         <Text
                                             id="f"
-                                            text="Targeted Date"
+                                            text="Target Date"
                                         />
                                         <DatePicker id="inpTD" enabled="false" value="{invModel>/propalDetails/targetDate}"/>
                                     </VBox>
@@ -128,6 +128,39 @@
                                             value="{invModel>/propalDetails/propBudget}"
                                         />
                                     </VBox>
+                                    <VBox
+                                        id="subVbox11555"
+                                        class="version"
+                                    >
+                                        <Text
+                                            id="v"
+                                            text="Medical Representative ID"
+                                        />
+                                        <Input id="inpVOB" enabled="false"
+                                            value="{invModel>/propalDetails/mecdicalId}" />
+                                    </VBox>
+<VBox
+                      id="subVbox115555"
+                                        class="version1"
+                                    >
+                                        <Text
+                                            id="v1"
+                                            text="Representative Name"
+                                        />
+                                        <Input id="inpVOB1" enabled="false"
+                                            value="{invModel>/propalDetails/medicalName}" />
+                                    </VBox>
+<VBox
+                      id="subVbox11555533"
+                                        class="sapUiMediumMarginBeginEnd"
+                                    >
+                                        <Text
+                                           id="v122"
+                                            text="Actual Attended"
+                                        />
+                                        <Input id="inpVOB1333" 
+                                            value="{invModel>/propalDetails/actuallyAttendance}" />
+             </VBox>
                                 </HBox>
                             </VBox>
                         </FlexBox>
@@ -147,13 +180,13 @@
                             <Column id="_IDGenColumn1">
                                 <Text
                                     id="_IDGenText12"
-                                    text="Items"
+                                    text="Item"
                                 />
                             </Column>
                             <Column id="_IDGenColumn2">
                                 <Text
                                     id="_IDGenText13"
-                                    text="Items Description"
+                                    text="Item Description"
                                 />
                             </Column>
                             <Column id="_IDGenColumn3">
@@ -214,15 +247,20 @@
                         <RadioButton
                             text="Cooperate Credit Card "
                             selected="true"
+                            enabled="false"
+                            
                         />
                         <RadioButton
                             text="Net Banking"
+                            enabled="false"
                         />
                         <RadioButton
                             text="UPI"
+                            enabled="false"
                         />
                         <RadioButton
                             text="Cash"
+                            enabled="false"
                         />
                     </HBox>
                     <HBox justifyContent="Center">
@@ -238,7 +276,7 @@
                             description="INR"
                             width="400px"
                             editable="false"
-                            value="0.00" />
+                            value="10000.00" />
                     </HBox>
                 </VBox>
             </Panel>

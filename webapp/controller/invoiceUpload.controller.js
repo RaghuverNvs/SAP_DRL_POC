@@ -1,12 +1,11 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/m/ColumnListItem",
-    "sap/m/Text"
+    "sap/m/MessageBox"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller) {
+    function (Controller,MessageBox) {
         "use strict";
 
         return Controller.extend("drlpoc.controller.invoiceUpload", {
@@ -19,8 +18,11 @@ sap.ui.define([
                         "propBudget": 10000,
                         "date": "2024-03-01",
                         "tot_attendees": 5,
-                        "targetDate": "2024-03-29",
-                        "duration": "4 hrs"
+                        "targetDate": "2024-04-01",
+                        "duration": "4 hrs",
+                        "mecdicalId":3574,
+                        "medicalName":"Raghuveer",
+                        "actuallyAttendance":5
                     }
                 }
 
@@ -28,17 +30,24 @@ sap.ui.define([
                      "lineItems": [
                         {
                             "itemsName": "Travel Expenditure",
-                            "itemsDescription": "Stayed attocated Taj Hotel",
-                            "price": "15000",
+                            "itemsDescription": "Stayed allocated Taj Hotel",
+                            "price": "5000",
                             "rate": 0,
-                            "total": "15000"
+                            "total": "5000"
                         },
                         {
                             "itemsName": "Food Expenditure",
                             "itemsDescription": "Food expenses",
-                            "price": "1200",
+                            "price": "3000",
                             "rate": 0,
-                            "total": "1200"
+                            "total": "3000"
+                        },
+                        {
+                            "itemsName": "Other Expenditure",
+                            "itemsDescription": "Other expenses",
+                            "price": "2000",
+                            "rate": 0,
+                            "total": "2000"
                         }
                     ],
                 }
@@ -50,7 +59,9 @@ sap.ui.define([
                 this.getView().setModel(invLineModel, "invLineModel")
             },
             onOpenSubmitInv: function () {
-
+                var inputField = this.getView().byId("inpVOB1333");
+      inputField.setEditable(!inputField.getEditable());
+               
                 if (this.pDialog) {
                     this.pDialog.then((oDialog) => {
                         oDialog.close();
@@ -65,7 +76,46 @@ sap.ui.define([
                 });
             },
             onCloseSubmitInv: function () {
+                MessageBox.success("Invoice has been successfully created");
                 this.byId("submitInv").close();
+                
             },
+            handleFileChange: function (oEvent) {
+                
+                this.selectedFile = oEvent.getParameters().files[0];
+                var fileUploaderObj = this.byId("invDoc");
+                var fileName = fileUploaderObj.getValue();
+
+                var fileNameTextObj = this.byId("selectedFileText");
+                fileNameTextObj.setText(fileName);
+
+                this.getView().byId("_IDGenPDFViewer1").setSource(URL.createObjectURL(this.selectedFile));
+
+                if (!fileName) {
+                    MessageBox.warning("No File Selected");
+                }
+            },
+            openPDF: function () {
+                this.byId("_IDGenPDFViewer1").downloadPDF();
+            },
+            handleFileChangeOne: function (oEvent) {
+                
+                this.selectedFile = oEvent.getParameters().files[0];
+                var fileUploaderObj = this.byId("invDoc1");
+                var fileName = fileUploaderObj.getValue();
+
+                var fileNameTextObj = this.byId("selectedFileText1");
+                fileNameTextObj.setText(fileName);
+
+                this.getView().byId("_IDGenPDFViewer12").setSource(URL.createObjectURL(this.selectedFile));
+
+                if (!fileName) {
+                    MessageBox.warning("No File Selected");
+                }
+            },
+            openSupportingPDF: function () {
+                this.byId("_IDGenPDFViewer12").downloadPDF();
+            },
+            
         });
     });

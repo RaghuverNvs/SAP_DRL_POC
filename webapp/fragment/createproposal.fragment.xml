@@ -246,7 +246,16 @@
                 <HBox class="quotation">
                     <VBox id="subVbox14555" class="sapUiTinyMarginBeginEnd">
                                 <Text id="d1555" text="Quotation"></Text>
-                                <unified:FileUploader id="invDoc" />
+                                <unified:FileUploader id="invDoc" change="handleFileChangeOne"/>
+                                <Link
+                                id="selectedFileText1"
+                                class="fileNameStyles"
+                                press="openSupportingPDF"
+                            /> 
+                            <PDFViewer
+                             id="_IDGenPDFViewer12"
+                           visible="false"
+                                 />
                             </VBox>    
                 </HBox>
             </VBox>

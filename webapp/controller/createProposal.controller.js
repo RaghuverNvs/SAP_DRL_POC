@@ -25,23 +25,26 @@ sap.ui.define([
                         "eDetails": "Hyd Cardiology Meet",
                         "propBudget": 10000,
                         "date": "2024-01-11",
-                        "tot_attendees": 5
+                        "tot_attendees": 5,
+                        "Status":"Approved"
                       },
                       {
                         "nameOfEvent": "Neurology Meet",
-                        "budgetAllc": 1076000,
+                        "budgetAllc": 100000,
                         "eDetails": "South Neurology Meet",
-                        "propBudget": 54000,
+                        "propBudget": 20000,
                         "date": "2024-01-11",
-                        "tot_attendees": 3
+                        "tot_attendees": 3,
+                        "Status":"Invoice Submitted"
                       },
                       {
                         "nameOfEvent": "Orthopedic Meet",
-                        "budgetAllc": 109800,
+                        "budgetAllc": 100000,
                         "eDetails": "West Orthopedic Meet",
-                        "propBudget": 50000,
+                        "propBudget": 30000,
                         "date": "2024-01-11",
-                        "tot_attendees": 4
+                        "tot_attendees": 4,
+                        "Status":"Invoice Submitted"
                       }
                     ]
                   }
@@ -129,8 +132,10 @@ sap.ui.define([
                     new Input(),
 					new Input(),
                 
-                    new Input(),
-                    new Input()]
+                    
+                    new Input({
+                        submit: this.updateTaxableTotalAmt.bind(this)
+                    })]
                 });
 
                 if (cntTableItems < 10) {
@@ -159,30 +164,7 @@ sap.ui.define([
                 }
                 this.updateTaxableTotalAmt();
             },
-            updateTaxableTotalAmt() {
-                var tableObj = this.getView().byId("taxTable");
-                var tableItems = tableObj.getItems();
-                var sum = 0;
-                var oFormat = NumberFormat.getFloatInstance({
-                    "groupingEnabled": true,
-                    "groupingSeparator": ',',
-                    "groupingBaseSize": 3,
-                    "groupingSize": 2,
-                    "decimals": 2,
-                    "decimalSeparator": ".",
-                });
-                tableItems.forEach(tableItem => {
-                    var taxableAmtInputObj = tableItem.getCells()[3];
-                    var taxableAmtInpVal = taxableAmtInputObj.getValue();
-                    var taxableAmtInpFrmtVal = this.formatCurrentValue(taxableAmtInpVal);
-                    if (taxableAmtInpFrmtVal) {
-                        taxableAmtInpFrmtVal = oFormat.parse(taxableAmtInpFrmtVal)
-                        sum = sum + parseInt(taxableAmtInpFrmtVal);
-                    }
-                });
-                var totalTaxAmt = oFormat.format(sum);
-                this.byId("totalInvioceAmt").setValue(totalTaxAmt);
-            },
+           
             onSuccessMessageBoxPress: function () {
                 MessageBox.success("Proposal has been successfully created");
             },
@@ -197,6 +179,39 @@ sap.ui.define([
             onDashboardPress:function(){
                 var routerObj = this.getOwnerComponent().getRouter();
                 routerObj.navTo("Screen4"); 
-            }
+            },
+            updateTaxableTotalAmt: function () {
+                var tableObj = this.getView().byId("taxTable");
+                var tableItems = tableObj.getItems();
+                var sum = 0;
+                tableItems.forEach(tableItem => {
+                    var taxableAmtInputObj = tableItem.getCells()[4];
+                    
+                    var taxableAmtInpVal = taxableAmtInputObj.getValue();
+                    console.log(taxableAmtInpVal)
+                    if (taxableAmtInpVal) {
+			sum = sum + parseInt(taxableAmtInpVal);
+                    }
+                });
+                this.byId("totalInvioceAmt").setValue(sum);
+            },
+            handleFileChangeOne: function (oEvent) {
+                
+                this.selectedFile = oEvent.getParameters().files[0];
+                var fileUploaderObj = this.byId("invDoc");
+                var fileName = fileUploaderObj.getValue();
+
+                var fileNameTextObj = this.byId("selectedFileText1");
+                fileNameTextObj.setText(fileName);
+
+                this.getView().byId("_IDGenPDFViewer12").setSource(URL.createObjectURL(this.selectedFile));
+
+                if (!fileName) {
+                    MessageBox.warning("No File Selected");
+                }
+            },
+            openSupportingPDF: function () {
+                this.byId("_IDGenPDFViewer12").downloadPDF();
+            },
         });
     });

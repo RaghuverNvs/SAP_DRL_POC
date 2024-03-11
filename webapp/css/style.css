@@ -123,7 +123,7 @@
   padding-left: 50px;
 }
 .paidStyles {
-  padding-left: 97px;
+  padding-left: 90px;
 }
 .paidStyles1{
   padding-left: 67px
@@ -208,7 +208,7 @@
   margin-top: 4px;
 }
 .readOnlyEventDetails{
-  margin-left: 107px
+  margin-left: 32px
 }
 .readOnlyProsposedDetails{
   margin-left: 60px
@@ -243,4 +243,12 @@
 }
 .quotation2{
   padding-left: 44.5% ;
+}
+.version{
+  padding-left: 59px;
+
+}
+.version1{
+  padding-left: 94px;
+
 }

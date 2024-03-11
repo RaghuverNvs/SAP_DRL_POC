@@ -11,7 +11,7 @@
                         <Label id="h1" text="Invoice Details" class="headdingNames" />
                         <HBox id="hbox445" class="container" >
                             <VBox id="subVbox1155" class="sapUiTinyMarginBeginEnd">
-                                <Text id="a1444" text="Invoice No"></Text>
+                                <Text id="a1444" text="Reference No"></Text>
                                 <Input id="invNo" />
                             </VBox>
                             <VBox id="subVbox125" class="sapUiTinyMarginBeginEnd">
@@ -19,13 +19,23 @@
                                 <DatePicker id="invDate"></DatePicker>
                             </VBox>
                             <VBox id="subVbox135" class="sapUiTinyMarginBeginEnd">
-                                <Text id="c1555" text="Invoice Due Date"></Text>
-                                <DatePicker id="invDueDate"></DatePicker>
+                                <Text id="c1555" text="Targeted Date"></Text>
+                                <DatePicker id="invDueDate" value="01-04-2024" enabled="false"></DatePicker>
                             </VBox>
                             <VBox id="subVbox14555" class="sapUiTinyMarginBeginEnd">
                                 <Text id="d1555" text="Invoice Document"></Text>
-                                <unified:FileUploader id="invDoc" />
-                            </VBox>                            
+                                <unified:FileUploader id="invDoc"  change="handleFileChange"/>
+                                <Link
+                                id="selectedFileText"
+                                class="fileNameStyles"
+                                press="openPDF"
+                            /> 
+                            <PDFViewer
+                             id="_IDGenPDFViewer1"
+                           visible="false"
+                                 />
+                            </VBox>  
+                                                      
                         </HBox>
                     </VBox>                    
                 </FlexBox>
@@ -33,25 +43,36 @@
                 <FlexBox id="fbox255" class="tabs mySamplePadding">
                     <VBox id="vbox2555">
                         <Label id="h55" text="Select Line Items" class="headdingNames" />
-                        <Table id="lineItem555s" mode="MultiSelect" >
+                        <Table id="lineItem555s"  items="{invLineModel>/lineItems}">
                             <columns>
                                 <Column ><Label text="Item"/></Column>
-                                <Column ><Label text="Items Description" /></Column>
-                                <Column ><Label text="Pice" /></Column>
+                                <Column ><Label text="Item Description" /></Column>
+                                <Column ><Label text="Price" /></Column>
                                 <Column ><Label text="Taxable Rate" /></Column>
                                 <Column ><Label text="Total" /></Column>
                             </columns>
 
-                            <items>
-                                <ColumnListItem >
-                                    <cells ><Text text="Travel Expenditure"></Text></cells>
-                                    <cells ><Text text="Stayed attocated Taj Hotel"></Text></cells>
-                                     <cells ><Text text="15000"></Text></cells>
-                                    <cells ><Text text="0"></Text></cells>
-                                     <cells ><Text text="15000"></Text></cells>
-                                    
-                                </ColumnListItem>
-                            </items>
+                            <ColumnListItem >
+                                <cells>
+                                    <Text
+                                        text="{invLineModel>itemsName}"
+                                    />
+                                    <Text
+                                        text="{invLineModel>itemsDescription}"
+                                    />
+                                    <Text
+                                        text="{invLineModel>price}"
+                                    />
+                                    <Text
+                                        text="{invLineModel>rate}"
+                                    />
+                                    <Text
+                                        text="{invLineModel>total}"
+                                    />
+                                </cells>
+                            </ColumnListItem>
+
+                            
 
 
 
@@ -78,7 +99,16 @@
                     <HBox class="quotation">
                     <VBox id="subVbox14555eee" class="sapUiTinyMarginBeginEnd">
                                 <Text id="d1555eeeeee" text="Supporting Documents"></Text>
-                                <unified:FileUploader id="invDocsss" />
+                                <unified:FileUploader id="invDoc1"  change="handleFileChangeOne"/>
+                                <Link
+                                id="selectedFileText1"
+                                class="fileNameStyles"
+                                press="openSupportingPDF"
+                            /> 
+                            <PDFViewer
+                             id="_IDGenPDFViewer12"
+                           visible="false"
+                                 />
                             </VBox>    
                      </HBox>
       </content>

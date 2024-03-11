@@ -159,7 +159,7 @@
                                     <Input
                                         id="_IDGenText8"
                                         class="invDateStyles1"
-                                        value="Muzza"
+                                        value="Saptarshi Chandra"
                                          enabled="false"
                                     />
                                 </HBox>
@@ -224,12 +224,12 @@
                                 >
                                     <Label
                                         id="_IDGenText232"
-                                        text="Event Conducted"
+                                        text="Events Conducted"
                                     />
                                    <Input
                                         id="_IDGenText63333"
                                         class="paidStyles"
-                                        value="04"
+                                        value="03"
                                         enabled="false"
                                     />
                                 </HBox>
@@ -310,7 +310,7 @@
                                 </Column>
                                 <Column id="status">
                                     <Text
-                                        id="statuss"
+                                        id="statussss"
                                         text="Event Details"
                                     />
                                 </Column>
@@ -330,6 +330,12 @@
                                     <Text
                                         id="submittedss33"
                                         text="Total No of Attendees"
+                                    />
+                                </Column>
+                                <Column id="submittedOn2333">
+                                    <Text
+                                        id="submittedss3344"
+                                        text="Status"
                                     />
                                 </Column>
 
@@ -362,6 +368,10 @@
                                         id="submittedOnn"
                                         text="{eventModel>tot_attendees}"
                                     />
+                                    <Text
+                                        id="submittedOnnee"
+                                        text="{eventModel>Status}"
+                                    />
                                         <!-- <Text id="attachmentsss"  text="{poData>price}"/> -->
                                     </cells>
                                 </ColumnListItem>
@@ -375,7 +385,7 @@
 <footer>
 <Toolbar class="bar">
 <ToolbarSpacer id="_IDGenToolbarSpacer1" />
- <Button id='dashbaord'   class="create"  type="Accept" text='Dashboard' icon="sap-icon://bbyd-dashboard" press="onDashboardPress"/>
+ <!-- <Button id='dashbaord'   class="create"  type="Accept" text='Dashboard' icon="sap-icon://bbyd-dashboard" press="onDashboardPress"/> -->
  	 <Button id='create' class="create"  type="Emphasized" text='Create Proposal Ticket' icon="sap-icon://create-form" press="onPressCreate"/>
  </Toolbar>
     </footer>
