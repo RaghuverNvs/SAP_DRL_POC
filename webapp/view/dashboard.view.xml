@@ -1,5 +1,5 @@
 <mvc:View
-    controllerName="supplierportal.controller.dashboard"
+    controllerName="drlpoc.controller.dashboard"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:core="sap.ui.core"
     displayBlock="true"
@@ -55,7 +55,7 @@
             </Bar> -->
 
               <!-- NAVBAR Implemented -->
-            <mvc:XMLView id="_IDGenXMLView1" viewName="supplierportal.view.navbar"/>
+            <!-- <mvc:XMLView id="_IDGenXMLView1" viewName="supplierportal.view.navbar"/> -->
 
             <Toolbar
                 id="_IDGenBar1"
@@ -84,10 +84,10 @@
                     />
                 </Select>
                 <ToolbarSpacer id="_IDGenToolbarSpacer1" />
-                <Label
+                <!-- <Label
                     id="_IDGenLabel123"
                     class="dashboardFont"
-                    text="Type of PO:"
+                    text="Prosposal Type:"
                 />
                 <Select
                     id="_IDGenSelect13"
@@ -103,11 +103,11 @@
                         key="{cuurencyId}"
                         text="{Name}"
                     />
-                </Select>
+                </Select> -->
                 <Label
                     id="_IDGenLabel1234"
                     class="dashboardFont"
-                    text="Vendor Company Name"
+                    text="Company Wise"
                 />
                 <Select
                     id="_IDGenSelect2"
@@ -123,7 +123,7 @@
                         text="{Name}"
                     />
                 </Select>
-                <Label
+                <!-- <Label
                     id="_IDGenLabel12342"
                     class="dashboardFont"
                     text="PO List:"
@@ -141,7 +141,7 @@
                         key="{PoNo}"
                         text="{Name}"
                     />
-                </Select>
+                </Select> -->
             </Toolbar>
         </content>
         <HBox
